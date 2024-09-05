@@ -4,93 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style/style.css">
-    <title>Document</title>
+    <title>Codinglab Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="sidebar">
+    <aside class="sidebar">
         <div class="logo">
             <div class="logo-circle">CL</div>
             <h2>Codinglab</h2>
         </div>
-        <div class="menu-item"><img src="/api/placeholder/20/20" alt="Dashboard icon"> Dashboard</div>
-        <div class="menu-item"><img src="/api/placeholder/20/20" alt="Content icon"> Content</div>
-        <div class="menu-item"><img src="/api/placeholder/20/20" alt="Analytics icon"> Analytics</div>
-        <div class="menu-item"><img src="/api/placeholder/20/20" alt="Likes icon"> Likes</div>
-        <div class="menu-item"><img src="/api/placeholder/20/20" alt="Comments icon"> Comments</div>
-        <div class="menu-item"><img src="/api/placeholder/20/20" alt="Share icon"> Share</div>
-        <div class="menu-item"><img src="/api/placeholder/20/20" alt="Logout icon"> Logout</div>
-        <div class="menu-item"><img src="/api/placeholder/20/20" alt="Dark Mode icon"> Dark Mode</div>
-    </div>
-    <div class="main-content">
-        <div class="header">
-            <h1>Dashboard</h1>
-            <input type="text" class="search-bar">
-            <div class="user-avatar"></div>
+        <nav class="menu-items">
+            <a href="#" class="menu-item"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="#" class="menu-item"><i class="fas fa-file-alt"></i> Content</a>
+            <a href="#" class="menu-item"><i class="fas fa-chart-bar"></i> Analytics</a>
+            <a href="#" class="menu-item"><i class="fas fa-thumbs-up"></i> Likes</a>
+            <a href="#" class="menu-item"><i class="fas fa-comments"></i> Comments</a>
+            <a href="#" class="menu-item"><i class="fas fa-share-alt"></i> Share</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="#" class="menu-item"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a href="#" class="menu-item" id="dark-mode-toggle"><i class="fas fa-adjust"></i> Dark Mode</a>
         </div>
-        <div class="dashboard-stats">
+    </aside>
+    <main class="main-content">
+        <header>
+            <div class="header-left">
+                <button class="toggle-sidebar"><i class="fas fa-bars"></i></button>
+                <input type="text" class="search-bar" placeholder="Search here ...">
+            </div>
+            <div class="user-avatar"></div>
+            <h1 class="page-title">Dashboard</h1>
+        </header>
+        <section class="dashboard-stats">
             <div class="stat-card">
-                <div class="icon"></div>
+                <i class="fas fa-thumbs-up fa-2x"></i>
                 <p>Total Likes</p>
                 <h2>50,120</h2>
             </div>
             <div class="stat-card">
-                <div class="icon"></div>
+                <i class="fas fa-comments fa-2x"></i>
                 <p>Comments</p>
                 <h2>25,120</h2>
             </div>
             <div class="stat-card">
-                <div class="icon"></div>
+                <i class="fas fa-share-alt fa-2x"></i>
                 <p>Total Share</p>
                 <h2>10,320</h2>
             </div>
-        </div>
-        <div class="recent-activity">
+        </section>
+        <section class="recent-activity">
             <h2>Recent Activity</h2>
             <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Joined</th>
-                    <th>Type</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>John Doe</td>
-                    <td>john@example.com</td>
-                    <td>Jan 21, 2020</td>
-                    <td>New</td>
-                    <td>Liked</td>
-                </tr>
-                <tr>
-                    <td>Kaiden Goodwin</td>
-                    <td>kaiden@example.com</td>
-                    <td>Jan 11, 2020</td>
-                    <td>Member</td>
-                    <td>Shared</td>
-                </tr>
-                <tr>
-                    <td>Hanna Harris</td>
-                    <td>hanna@example.com</td>
-                    <td>Jan 11, 2020</td>
-                    <td>New</td>
-                    <td>Shared</td>
-                </tr>
-                <tr>
-                    <td>Magnus Yates</td>
-                    <td>magnus@example.com</td>
-                    <td>Jan 10, 2020</td>
-                    <td>Member</td>
-                    <td>Shared</td>
-                </tr>
-                <tr>
-                    <td>Sharon Price</td>
-                    <td>sharon@example.com</td>
-                    <td>Jan 10, 2020</td>
-                    <td>Member</td>
-                    <td>Liked</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Joined</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Jan 21, 2020</td>
+                        <td>New</td>
+                        <td>Liked</td>
+                    </tr>
+                    <tr>
+                        <td>Kaiden Goodwin</td>
+                        <td>kaiden@example.com</td>
+                        <td>Jan 11, 2020</td>
+                        <td>Member</td>
+                        <td>Shared</td>
+                    </tr>
+                    <tr>
+                        <td>Hanna Harris</td>
+                        <td>hanna@example.com</td>
+                        <td>Jan 11, 2020</td>
+                        <td>New</td>
+                        <td>Shared</td>
+                    </tr>
+                    <tr>
+                        <td>Magnus Yates</td>
+                        <td>magnus@example.com</td>
+                        <td>Jan 10, 2020</td>
+                        <td>Member</td>
+                        <td>Shared</td>
+                    </tr>
+                    <tr>
+                        <td>Sharon Price</td>
+                        <td>sharon@example.com</td>
+                        <td>Jan 10, 2020</td>
+                        <td>Member</td>
+                        <td>Liked</td>
+                    </tr>
+                </tbody>
             </table>
-        </div>
-    </div>
+        </section>
+    </main>
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        const toggleSidebar = document.querySelector('.toggle-sidebar');
+        const sidebar = document.querySelector('.sidebar');
+        const mainContent = document.querySelector('.main-content');
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+
+        toggleSidebar.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+            mainContent.classList.toggle('expanded');
+        });
+    </script>
 </body>
 </html>
