@@ -1,6 +1,8 @@
 # This is the Dashboard static site using in ODDS test
-This site contains HTML and CSS
-Most of this project was generate by Claude.ai you can follow by these prompts \
+This site contains HTML and CSS 
+### Click this below link to see the page
+https://twan-odds.github.io/dashboard-static/page/index.html 
+###  Most of this project was generate by Claude.ai you can follow by these prompts
 ** Please do step by step **
 1. [Upload your Image reference]
 Create the HTML and CSS static page by follow the image design. This page is the [page name] which includes [your site elements].
