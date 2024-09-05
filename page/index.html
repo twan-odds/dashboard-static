@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <aside class="sidebar">
+    <aside class="sidebar collapsed">
         <div class="logo">
             <div class="logo-circle">CL</div>
             <h2>Codinglab</h2>
@@ -26,7 +26,7 @@
             <a href="#" class="menu-item" id="dark-mode-toggle"><i class="fas fa-adjust"></i> Dark Mode</a>
         </div>
     </aside>
-    <main class="main-content">
+    <main class="main-content expanded">
         <header>
             <div class="header-left">
                 <button class="toggle-sidebar"><i class="fas fa-bars"></i></button>
@@ -119,6 +119,23 @@
             sidebar.classList.toggle('collapsed');
             mainContent.classList.toggle('expanded');
         });
+
+        // Check if the screen is mobile-sized on page load
+        function checkScreenSize() {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.add('collapsed');
+                mainContent.classList.add('expanded');
+            } else {
+                sidebar.classList.remove('collapsed');
+                mainContent.classList.remove('expanded');
+            }
+        }
+
+        // Run on page load
+        checkScreenSize();
+
+        // Run on window resize
+        window.addEventListener('resize', checkScreenSize);
     </script>
 </body>
 </html>
